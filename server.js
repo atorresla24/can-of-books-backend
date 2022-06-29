@@ -3,6 +3,7 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
+
 const mongoose = require('mongoose');
 const Book = require('./models/books');
 
@@ -15,6 +16,7 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function () {
   console.log('Mongoose is connected');
 });
+
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -26,41 +28,17 @@ app.get('/', (request, response) => {
 });
 
 app.get('/test', (request, response) => {
-
   response.send('test request received')
-
 })
 
 app.get('/books', getBooks);
 app.post('/books', postBooks);
-app.delete('/books/:id', deleteBooks);
 
 async function getBooks(request, response, next){
   try{
     let results = await Book.find();
     response.status(200).send(results);
   } catch (error) {
-    next(error);
-  }
-}
-
-async function postBooks(request, response, next){
-  console.log(request.body);
-  try{
-    let addBook = await Book.create(request.body);
-    response.status(200).send(addBook);
-  } catch(error) {
-    next(error);
-  }
-}
-
-async function deleteBooks(request, response, next){
-  let id = request.params.id;
-  console.log(id);
-  try{
-    await Book.findByIdAndDelete(id)
-    response.status(410).send('Book deleted successfully');
-  } catch(error) {
     next(error);
   }
 }
