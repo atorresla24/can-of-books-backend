@@ -1,6 +1,6 @@
 # Project Name: Can of Books 
 
-**Author**: Team Member Names Goes Here
+**Author**: Alec Torres and Stephanie Hill
 **Version**: 1.0.0 (increment the patch/fix version number if you make more commits past your first submission)
 
 ## Overview
@@ -21,17 +21,29 @@
 <!-- See below -->
 
 ## Credit and Collaborations
-<!-- Give credit (and a link) to other people or resources that helped you build this application. -->
+Lab 11
 
-Name of feature: ________________________________
+Name of feature: Can-of-books-backend 
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 3 hours 
 
-Start time: _____
+Start time: 5:00 pm EST
 
-Finish time: _____
+Finish time: 10pm EST
 
-Actual time needed to complete: _____
+Actual time needed to complete: 5 hours 
+
+Lab 12
+
+Name of feature: Can-of-books-frontend
+
+Estimate of time needed to complete: 4 hours 
+
+Start time: 5:30 pm EST
+
+Finish time: 7:30 pm EST
+
+Actual time needed to complete: 2 hours 
 
 # Start your own "Can of Books" App
 
